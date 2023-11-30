@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: WETH9
@@ -20,7 +20,7 @@ dataSources:
         - Withdrawal
       abis:
         - name: WETH9
-          file: ./abis/WETH9.json
+          file: WETH9/abis/WETH9.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
@@ -30,4 +30,4 @@ dataSources:
           handler: handleDeposit
         - event: Withdrawal(indexed address,uint256)
           handler: handleWithdrawal
-      file: ./src/weth-9.ts
+      file: WETH9/WETH9.wasm
